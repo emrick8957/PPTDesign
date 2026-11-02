@@ -1,0 +1,28 @@
+# Version
+
+- Current version: `1.6.0-adaptive-recomposition`
+- Release date: `2026-06-20`
+- Base: Role C semantic-contract baseline `1.0.0`
+- Added: mandatory `C2.5` Huawei visual refinement stage
+- Added: page-type refinement matrix, refinement report and negative-style gates
+- Added: render-contract compilation and refinement validation scripts
+- Changed: delivery threshold is consistently `>=92`
+- Changed: `ROLE_C_SKILL_FULL_CONTENT.md` is now a lightweight index
+- Changed: Role C skill entry is now `huawei-ppt-builder`; default mode remains `page_images`, optional mode remains `pptx`
+- Fixed: `edge_roles` consistently uses an object keyed by relationship role
+- Added: chart, layout and page-type enum validation plus an end-to-end Role A regression snapshot
+- Added: directory-level render-contract compilation that inherits Role A global defaults, page-design overrides and page-level visual intent
+- Fixed: page type mapping consumes `page_type`, then Role A `type`, before falling back
+- Changed: Role A input `visual_rules.md` is the visual SSOT; Role C keeps only a minimal fallback gate
+- Added: `libraries/c2_5_execution_policy.md` for Role C-only refinement boundaries
+- Removed: redundant `libraries/page_render_rules.md`
+- Added: C0 fail-closed behavior and compiler-side validation
+- Added: structured visible-content coverage for tables, cards, roadmaps, risks and decisions
+- Added: inherited `density_budget` and high-density preservation rules
+- Added: objective C3 gates for L-shaped redlines, repeated contact-sheet skeletons and high-density underfill
+- Added: `chart_components` single-source validation, one-primary/up-to-three-supporting normalization, layout-region compatibility, component proof differentiation and per-component coverage
+- Changed: legacy top-level chart fields remain readable only when `chart_components` is absent; primary projections are machine-derived in the render contract
+- Fixed: right insight panel cannot be used as an independent chart component region
+- Added: C1.5 adaptive visual recomposition with source/effective visual plans and deterministic audit validation
+- Added: controlled layout, component-region, copy and chart-type transformations without mutating deck_spec
+- Changed: C2/C2.5/C3 consume and audit the effective visual plan instead of requiring literal baseline reproduction

@@ -1,0 +1,15 @@
+{
+  "profile_version": "1.0.0",
+  "bundle_id": "skills0818-20260912",
+  "topic": "{daily_date} 前沿雷达日报精读",
+  "date_source": "document_body_then_filename",
+  "audience": "技术汇报 / 技术洞察",
+  "page_count": 10,
+  "density": {"overall": "technical_deep_dive", "layout": "high", "charts_images": "high", "text": "high"},
+  "output": {"mode": "page_images", "format": "PNG", "width": 1920, "height": 1080, "inline_preview": true, "create_pptx": false, "sandbox_links": false, "contact_sheet": true, "zip": true, "preserve_native_images": true},
+  "visual": {"background": "white", "palette": "Huawei red / black / gray / white", "secondary_icon_color": "gray", "max_primary_red_anchors": 1, "bottom_conclusion_bar": false, "forbidden_phrases": ["不是……而是……", "本页带走", "本页结论", "今日结论", "本页判断"]},
+  "execution": {"single_request_end_to_end": true, "repeat_design_confirmation": false, "read_full_daily": true, "read_original_sources_when_needed": true, "golden_images_are_facts": false, "invent_extra_signals": false, "label_demo_data": true, "max_alternative_paths_per_issue": 2, "image_generation": "built_in_imagegen", "fallback_paid_api_without_explicit_request": false},
+  "resolution_policy": {"request_native": "1920x1080", "normalize_if_needed": true, "preserve_all_content": true, "report_native_size": true, "claim_upscale_as_native": false},
+  "workspace": "D:/AI/PPT/feishu-bot4-workspace",
+  "output_paths": {"role_a": "project/work/frontier_radar_{YYYYMMDD}_{run}", "role_c": "project/render/frontier_radar_{YYYYMMDD}_{run}", "delivery": "deliverables/frontier_radar_{YYYYMMDD}_{run}"}
+}

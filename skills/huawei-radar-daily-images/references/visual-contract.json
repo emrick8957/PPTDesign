@@ -1,0 +1,109 @@
+{
+  "schema": "daily-visual-v1",
+  "canvas": [
+    1920,
+    1080
+  ],
+  "title": {
+    "x": 40,
+    "y": 72,
+    "anchor": "top-left",
+    "max_lines": 1,
+    "max_width": 1820,
+    "font_px": [
+      44,
+      56
+    ]
+  },
+  "page_label": {
+    "x": 40,
+    "y": 160,
+    "radius_px": [
+      10,
+      12
+    ],
+    "font_px": [
+      21,
+      23
+    ],
+    "foreground": "#333740",
+    "background": "#F0F1F3",
+    "gap_to_subtitle": 12,
+    "format": "P{page_no}：{page_title}",
+    "weight": "bold",
+    "height": [
+      40,
+      42
+    ]
+  },
+  "subtitle": {
+    "font_px": [
+      28,
+      34
+    ],
+    "weight": "regular"
+  },
+  "body": {
+    "x": 40,
+    "y": 224,
+    "width": 1820,
+    "bottom": 928
+  },
+  "source": {
+    "x": 40,
+    "y": 938,
+    "max_height": 30
+  },
+  "brand": {
+    "x": 40,
+    "y": 980,
+    "height": [
+      40,
+      42
+    ],
+    "gap": 10,
+    "padding_x": 18,
+    "radius_px": [
+      10,
+      12
+    ],
+    "font_px": [
+      21,
+      23
+    ],
+    "foreground": "#333740",
+    "background": "#F0F1F3",
+    "labels": [
+      "AI4MBDSE",
+      "雷达日报精读"
+    ],
+    "weight": "regular"
+  },
+  "page_number": {
+    "x": 1860,
+    "y": 1015,
+    "anchor": "right-baseline",
+    "font_px": [
+      18,
+      21
+    ]
+  },
+  "position_tolerance_px": 12,
+  "main_red_anchors_max": 1,
+  "secondary_icons": "gray",
+  "bottom_conclusion_bar": false,
+  "forbidden_phrases": [
+    "本页带走",
+    "本页结论",
+    "今日结论",
+    "本页判断"
+  ],
+  "review_checks": [
+    "public_layout",
+    "copy_and_variables",
+    "evidence_coverage",
+    "relationship_paths",
+    "information_increment",
+    "visual_hierarchy"
+  ]
+}

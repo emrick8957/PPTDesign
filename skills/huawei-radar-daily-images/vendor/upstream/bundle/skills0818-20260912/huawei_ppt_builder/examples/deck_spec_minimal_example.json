@@ -1,0 +1,64 @@
+{
+  "deck_title": "示例：AI in MBSE",
+  "pages": [
+    {
+      "page_id": "P01",
+      "section": "总览",
+      "title": "AI 价值不在单点算法，而在可回写的工程闭环",
+      "conclusion": "单点 AI 需要进入语义底座、仿真接口和闭环治理，才能形成工程价值。",
+      "page_goal": "logic-only: establish the central argument",
+      "core_judgement": "logic-only: AI must be integrated into MBSE lifecycle",
+      "type": "executive_summary",
+      "layout_pattern": "executive_summary_dashboard",
+      "chart_components": [
+        {
+          "component_id": "C1",
+          "component_role": "primary",
+          "component_region": "main",
+          "chart_type": "key_findings_cards",
+          "chart_proof_goal": "logic-only: show the four-step argument path",
+          "chart_data": {
+            "items": [
+              {
+                "label": "Background",
+                "headline": "单点 AI 不够",
+                "display_text": "复杂生产系统需要全生命周期建模"
+              },
+              {
+                "label": "Catalyst",
+                "headline": "语义底座成为前提",
+                "display_text": "知识图谱与 FMU 让数据具备工程上下文"
+              }
+            ]
+          },
+          "chart_visual_boundary": [
+            "不得画成目录页"
+          ],
+          "chart_semantic_mapping": {
+            "main_visual_logic": "四个阶段构成从问题到闭环的判断路径",
+            "forbidden_visualization": [
+              "四卡并列但无箭头"
+            ]
+          }
+        },
+        {
+          "component_id": "C2",
+          "component_role": "supporting",
+          "component_region": "bottom",
+          "supports_component_id": "C1",
+          "chart_type": "metric_showcase_grid",
+          "chart_proof_goal": "logic-only: quantify lifecycle coverage and traceability",
+          "chart_data": {
+            "metrics": [
+              {"label": "生命周期覆盖", "value": "4 阶段"},
+              {"label": "追溯链", "value": "端到端"}
+            ]
+          },
+          "chart_visual_boundary": [
+            "不得扩展为第二张架构图"
+          ]
+        }
+      ]
+    }
+  ]
+}

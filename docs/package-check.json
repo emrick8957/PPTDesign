@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "status": "PASS",
+  "scope": "Packaging, source parity, relocation, dependency integrity and offline receipts only",
+  "source_files_byte_identical": 144,
+  "locked_vendor_files": 133,
+  "required_rules_present": 66,
+  "golden_images_present": 10,
+  "relocated_verify": "PASS",
+  "cli_help": "PASS",
+  "offline_tests": {
+    "run": 20,
+    "passed": 20,
+    "failed": 0,
+    "synthetic_fixtures": true
+  },
+  "python": "3.12.14",
+  "pillow": "12.3.0",
+  "new_imagegen_calls": 0,
+  "image_quality_acceptance": "NOT_RETESTED; previous strict visual validation failed",
+  "unmodified_project_and_vendor": true
+}

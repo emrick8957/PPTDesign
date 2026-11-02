@@ -1,0 +1,29 @@
+{
+  "project_name": "",
+  "delivery_mode": "page_images",
+  "page_range": "P01-Pxx",
+  "image_resolution": "1920×1080",
+  "source_files": [
+    "deck_spec.json",
+    "page_design.md",
+    "visual_rules.md",
+    "chart_patterns.md",
+    "layout_library.md",
+    "deck_spec_field_dictionary.md"
+  ],
+  "generated_files": {
+    "page_images": [],
+    "contact_sheet": "",
+    "self_check_report": "",
+    "optimization_report": ""
+  },
+  "self_check_summary": {
+    "average_score": 0,
+    "usable_pages": [],
+    "light_optimization_pages": [],
+    "partial_rework_pages": [],
+    "must_redo_pages": []
+  },
+  "known_limitations": [],
+  "created_at": ""
+}

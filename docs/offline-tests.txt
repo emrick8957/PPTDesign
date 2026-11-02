@@ -1,0 +1,25 @@
+test_approval_rework_and_delivery (__main__.Receipts.test_approval_rework_and_delivery) ... ok
+test_design_requires_complete_audit (__main__.Receipts.test_design_requires_complete_audit) ... ok
+test_discovery_and_vendor (__main__.Receipts.test_discovery_and_vendor) ... ok
+test_git_output_boundary (__main__.Receipts.test_git_output_boundary) ... ok
+test_handoff_without_cover_and_config (__main__.Receipts.test_handoff_without_cover_and_config) ... ok
+test_input_identity_and_revisions (__main__.Receipts.test_input_identity_and_revisions) ... ok
+test_invalid_empty_and_tamper (__main__.Receipts.test_invalid_empty_and_tamper) ... ok
+test_lock_line_ending_mismatch_is_explicit (__main__.Receipts.test_lock_line_ending_mismatch_is_explicit) ... ok
+test_missing_page_normalization_and_evidence_tamper (__main__.Receipts.test_missing_page_normalization_and_evidence_tamper) ... ok
+test_missing_reading_and_golden_block (__main__.Receipts.test_missing_reading_and_golden_block) ... ok
+test_pending_lock_and_paths (__main__.Receipts.test_pending_lock_and_paths) ... ok
+test_preparation_invalidates_on_word_and_source_change (__main__.Receipts.test_preparation_invalidates_on_word_and_source_change) ... ok
+test_readiness_receipt_and_rule_tamper (__main__.Receipts.test_readiness_receipt_and_rule_tamper) ... ok
+test_report_date_vs_source_dates_and_clarification (__main__.Receipts.test_report_date_vs_source_dates_and_clarification) ... ok
+test_step1_stops_and_requires_step2 (__main__.Receipts.test_step1_stops_and_requires_step2) ... ok
+test_unread_vendor_tool_change_blocks_resume (__main__.Receipts.test_unread_vendor_tool_change_blocks_resume) ... ok
+test_upstream_lock_pin_matches_stored_bytes (__main__.Receipts.test_upstream_lock_pin_matches_stored_bytes) ... ok
+test_visual_and_relation_failures_block_approval (__main__.Receipts.test_visual_and_relation_failures_block_approval) ... ok
+test_wrong_phase_and_bitmap (__main__.Receipts.test_wrong_phase_and_bitmap) ... ok
+test_zero_signals (__main__.Receipts.test_zero_signals) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 25.747s
+
+OK

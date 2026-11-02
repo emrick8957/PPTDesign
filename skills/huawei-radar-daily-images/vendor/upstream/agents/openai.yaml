@@ -1,0 +1,6 @@
+interface:
+  display_name: "华为日报精读图片"
+  short_description: "上传日报Word，一次完成十页高密度华为图片版PPT与逐页内联预览"
+  default_prompt: "使用 $huawei-radar-daily-images，按固定流程将附件日报Word生成10页高密度华为图片版PPT，直接执行并逐页内联展示。"
+policy:
+  allow_implicit_invocation: true

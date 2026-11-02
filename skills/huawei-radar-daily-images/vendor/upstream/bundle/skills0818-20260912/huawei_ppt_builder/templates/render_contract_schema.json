@@ -1,0 +1,479 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Role C Page Render Contract",
+  "type": "object",
+  "required": [
+    "page_id",
+    "recomposition_mode",
+    "source_contract",
+    "source_design",
+    "source_visual_plan",
+    "effective_visual_plan",
+    "recomposition_audit",
+    "render_intent",
+    "visible_text_plan",
+    "visible_content_coverage",
+    "semantic_constraints",
+    "visual_constraints",
+    "fail_conditions"
+  ],
+  "properties": {
+    "page_id": {
+      "type": "string",
+      "pattern": "^P[0-9]{2,}$"
+    },
+    "recomposition_mode": {
+      "type": "string",
+      "enum": [
+        "strict_fidelity",
+        "adaptive_recomposition"
+      ]
+    },
+    "source_visual_plan": {
+      "type": "object",
+      "required": [
+        "layout_pattern",
+        "chart_components",
+        "visible_title",
+        "visible_conclusion"
+      ],
+      "properties": {
+        "layout_pattern": {"type": "string"},
+        "chart_components": {"type": "array", "minItems": 1, "maxItems": 4},
+        "visible_title": {"type": "string"},
+        "visible_conclusion": {"type": "string"}
+      }
+    },
+    "effective_visual_plan": {
+      "type": "object",
+      "required": [
+        "layout_pattern",
+        "chart_components",
+        "visible_title",
+        "visible_conclusion"
+      ],
+      "properties": {
+        "layout_pattern": {"type": "string"},
+        "chart_components": {"type": "array", "minItems": 1, "maxItems": 4},
+        "visible_title": {"type": "string"},
+        "visible_conclusion": {"type": "string"}
+      }
+    },
+    "recomposition_audit": {
+      "type": "object",
+      "required": [
+        "trigger_reasons",
+        "layout_changed",
+        "chart_type_changed",
+        "component_region_changed",
+        "copy_adjustments",
+        "semantic_invariants",
+        "evidence_coverage",
+        "compatibility_checks",
+        "quality_delta",
+        "return_to_A_required"
+      ],
+      "properties": {
+        "trigger_reasons": {"type": "array", "items": {"type": "string"}},
+        "layout_changed": {"type": "boolean"},
+        "chart_type_changed": {"type": "boolean"},
+        "component_region_changed": {"type": "boolean"},
+        "copy_adjustments": {"type": "array", "items": {"type": "object"}},
+        "semantic_invariants": {
+          "type": "object",
+          "required": [
+            "core_judgement_preserved",
+            "chart_proof_goals_preserved",
+            "facts_preserved",
+            "relations_preserved"
+          ]
+        },
+        "evidence_coverage": {
+          "type": "object",
+          "required": ["required", "covered", "missing"]
+        },
+        "compatibility_checks": {
+          "type": "object",
+          "required": ["layout_region", "chart_target_schema", "chart_transform"]
+        },
+        "quality_delta": {
+          "type": "object",
+          "required": ["baseline_score", "effective_score"]
+        },
+        "return_to_A_required": {"type": "boolean"}
+      }
+    },
+    "source_contract": {
+      "type": "object",
+      "required": [
+        "title",
+        "conclusion",
+        "section",
+        "core_judgement",
+        "chart_proof_goal"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "conclusion": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string"
+        },
+        "core_judgement": {
+          "type": "string",
+          "description": "logic-only; never render literally"
+        },
+        "chart_proof_goal": {
+          "type": "string",
+          "description": "logic-only; never render literally"
+        }
+      }
+    },
+    "source_design": {
+      "type": "object",
+      "required": [
+        "global_design_defaults",
+        "page_design_global_defaults",
+        "page_design_override",
+        "page_design_sections"
+      ],
+      "properties": {
+        "global_design_defaults": {
+          "type": "object"
+        },
+        "page_design_global_defaults": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "page_design_override": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "page_design_sections": {
+          "type": "object"
+        }
+      }
+    },
+    "render_intent": {
+      "type": "object",
+      "required": [
+        "layout_pattern",
+        "chart_type",
+        "chart_contract_source",
+        "chart_components",
+        "type",
+        "type_source",
+        "main_visual_goal"
+      ],
+      "properties": {
+        "layout_pattern": {
+          "type": "string"
+        },
+        "chart_type": {
+          "type": "string"
+        },
+        "chart_contract_source": {
+          "type": "string",
+          "enum": [
+            "chart_components",
+            "legacy_top_level"
+          ]
+        },
+        "chart_components": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": [
+              "component_id",
+              "component_role",
+              "component_region",
+              "chart_type",
+              "chart_proof_goal",
+              "chart_data",
+              "visible_labels",
+              "semantic_constraints",
+              "component_coverage"
+            ],
+            "properties": {
+              "component_id": {
+                "type": "string",
+                "pattern": "^C[1-9][0-9]*$"
+              },
+              "component_role": {
+                "type": "string",
+                "enum": ["primary", "supporting"]
+              },
+              "component_region": {
+                "type": "string",
+                "enum": ["main", "left", "right", "top", "bottom"]
+              },
+              "supports_component_id": {
+                "type": ["string", "null"]
+              },
+              "chart_type": {
+                "type": "string"
+              },
+              "chart_proof_goal": {
+                "type": "string",
+                "minLength": 1
+              },
+              "chart_data": {
+                "type": "object"
+              },
+              "visible_labels": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "semantic_constraints": {
+                "type": "object"
+              },
+              "component_coverage": {
+                "type": "object",
+                "required": [
+                  "structured_label_count",
+                  "required_evidence",
+                  "missing_required_evidence"
+                ]
+              }
+            }
+          }
+        },
+        "type": {
+          "type": "string"
+        },
+        "type_source": {
+          "type": "string"
+        },
+        "main_visual_goal": {
+          "type": "string"
+        },
+        "visual_notes": {
+          "type": "string"
+        },
+        "visual_focus": {
+          "type": "array"
+        },
+        "must_highlight": {
+          "type": "array"
+        },
+        "text_density": {
+          "type": "string"
+        },
+        "need_compression": {
+          "type": "boolean"
+        },
+        "data_gaps": {
+          "type": "array"
+        },
+        "density_budget": {
+          "type": "object",
+          "properties": {
+            "density_profile": {
+              "type": "string",
+              "enum": [
+                "executive_clean",
+                "technical_deep_dive"
+              ]
+            },
+            "underfill_action": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "visible_text_plan": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "conclusion": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "main_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "node_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "short_edge_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "insight_panel": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4
+        },
+        "bottom_conclusion": {
+          "type": "string"
+        }
+      }
+    },
+    "visible_content_coverage": {
+      "type": "object",
+      "required": [
+        "structured_label_count",
+        "display_text_count",
+        "required_evidence",
+        "missing_required_evidence",
+        "component_coverage"
+      ],
+      "properties": {
+        "structured_label_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "display_text_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "required_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_required_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "component_coverage": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "component_id",
+              "structured_label_count",
+              "required_evidence",
+              "missing_required_evidence"
+            ],
+            "properties": {
+              "component_id": {"type": "string"},
+              "structured_label_count": {"type": "integer", "minimum": 0},
+              "required_evidence": {"type": "array", "items": {"type": "string"}},
+              "missing_required_evidence": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      }
+    },
+    "semantic_constraints": {
+      "type": "object",
+      "properties": {
+        "main_visual_logic": {
+          "type": "string"
+        },
+        "stage_or_node_meaning": {
+          "type": [
+            "array",
+            "object"
+          ]
+        },
+        "forbidden_visualization": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "correspondence_pairs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "left",
+              "right"
+            ]
+          }
+        },
+        "edge_roles": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "from",
+                "to"
+              ],
+              "properties": {
+                "from": {
+                  "type": "string"
+                },
+                "to": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "visual_constraints": {
+      "type": "object",
+      "properties": {
+        "red_anchor": {
+          "type": "string"
+        },
+        "card_hierarchy": {
+          "type": "string"
+        },
+        "spacing_rule": {
+          "type": "string"
+        },
+        "bottom_bar_rule": {
+          "type": "string"
+        },
+        "visual_simplification": {
+          "type": "string"
+        },
+        "visual_boundary": {
+          "type": "string"
+        },
+        "page_type_gate": {
+          "type": "string"
+        },
+        "right_insight_width": {
+          "type": "string"
+        },
+        "footer": {
+          "type": "string"
+        },
+        "safe_area": {
+          "type": "string"
+        }
+      }
+    },
+    "fail_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

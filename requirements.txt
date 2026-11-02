@@ -1,0 +1,2 @@
+# Python 3.10+; the host supplies image generation, image viewing and review agents.
+Pillow

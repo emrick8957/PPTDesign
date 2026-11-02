@@ -1,0 +1,172 @@
+{
+  "deck_title": "MBESE 如何指导 MBSE 实践（高密度技术架构单页）",
+  "audience": "系统工程负责人 / MBSE 推进团队 / 研发数字化工具链负责人",
+  "style": "huawei_executive",
+  "source": "用户提供《MBESE 如何指导 MBSE 实践》参考图；仅作为结构、论证与可辨识标签参考",
+  "version_note": "huawei_ppt_master v0.4.2-relation-roles; high information + high image + high text density; screenshot is not used to expand unverified product facts.",
+  "global_design_defaults": {
+    "palette": "white + #C8102E + dark gray + light gray",
+    "footer": "用户提供参考图 / Confidential / 页码",
+    "red_rule": "单页仅 1 个主红色视觉锚点",
+    "font": "标题 32-36pt，模块标题 18-22pt，正文与标签 12-16pt，页脚 8-10pt",
+    "density_mode": "high_information_high_image_high_text"
+  },
+  "slides": [
+    {
+      "slide_no": 1,
+      "section": "MBESE / MBSE 实践",
+      "type": "architecture",
+      "page_goal": "技术汇报：让读者在一页内看懂五类架构指导如何贯通流程、工具和数据血缘",
+      "title": "MBESE 不是工具叠加，而是以五类架构指导贯通流程、工具与数据血缘",
+      "conclusion": "以业务、流程、角色、应用和数据五类架构统一工程边界，将数字化流程链、数字工具链和数字血缘纳入同一数字主线平台，才能把 MBSE 从局部建模推进为贯穿研发过程的体系实践。",
+      "core_judgement": "MBSE 落地的关键不是增加若干建模和仿真工具，而是由 MBESE 先定义架构边界，再让过程节点、工具能力和 BOM 对象在同一数字主线上可关联、可追溯。",
+      "chart_proof_goal": "主图必须证明五类架构指导通过方法、应用和数据接入，牵引三条横向主链在五个研发站点同步贯通，并由数字主线平台承接跨阶段追溯。",
+      "chart_visual_boundary": [
+        "不得将三条主链压缩为三张并列卡片；必须保留横向贯通箭头与五站纵向映射",
+        "不得只列 SysML、Modelica、CAD、CAE、CAPP 工具名；必须同时呈现流程链、工具链和 BOM 血缘",
+        "不得使用模糊 Logo 替代可读标签；工具版本和厂商能力未经核验不得扩写",
+        "数字主线平台使用弱灰底承接，不得画成厚重红色底座",
+        "高密度模式下文字需短语化，纵向映射线不得压住标签"
+      ],
+      "chart_semantic_mapping": {
+        "chart_reading_intent": "读者应判断：MBESE 为 MBSE 实践提供的是体系化牵引机制，流程、工具和 BOM 血缘必须按研发节点同步贯通，而非分散建设。",
+        "main_visual_logic": "左侧五类架构定义工程边界；方法指导、应用接入和数据接入三类箭头进入右侧主体；右侧三条横向主链分别表达研发流程、工具承载和 BOM 血缘，并通过五组纵向映射线绑定到同一站点；底部数字主线平台承接跨阶段关联。",
+        "axis_semantics": {
+          "horizontal": "从系统建模到工艺准备的研发过程推进",
+          "vertical": "同一研发站点中的流程对象、工具承载与数据血缘对齐",
+          "bottom": "数字主线平台对跨阶段模型与数据对象进行承接"
+        },
+        "stage_or_node_meaning": {
+          "M1": "业务架构：明确技术领域与专业划分",
+          "M2": "流程架构：明确研制流程与操作规程",
+          "M3": "角色架构：明确工程型号队伍与职责协同",
+          "M4": "应用架构：识别设计、建模、仿真和工艺工具",
+          "M5": "数据架构：识别并分类工程研制数据",
+          "P1": "SysML：系统建模站点",
+          "P2": "Modelica：多领域模型站点",
+          "P3": "CAD：详细设计站点",
+          "P4": "CAE：仿真分析站点",
+          "P5": "CAPP：工艺准备站点",
+          "T1": "系统建模工具",
+          "T2": "多领域建模工具",
+          "T3": "详细设计工具",
+          "T4": "仿真分析工具",
+          "T5": "工艺准备工具",
+          "B1": "架构 BOM",
+          "B2": "参数 BOM",
+          "B3": "EBOM",
+          "B4": "仿真 BOM",
+          "B5": "MBOM",
+          "PLATFORM": "数字主线平台"
+        },
+        "insight_panel_logic": [
+          "右侧洞察只解释主图：先定架构边界，再贯通过程节点",
+          "工具链必须绑定研发活动，避免孤立建设",
+          "BOM 演进承担跨阶段追溯，数字主线平台承接关联"
+        ],
+        "edge_roles": {
+          "flow_decompose": [
+            {"from": "M1", "to": "GUIDE"},
+            {"from": "M2", "to": "GUIDE"},
+            {"from": "M3", "to": "GUIDE"},
+            {"from": "M4", "to": "APP"},
+            {"from": "M5", "to": "DATA"}
+          ],
+          "flow_integrate": [
+            {"from": "P1", "to": "P2"},
+            {"from": "P2", "to": "P3"},
+            {"from": "P3", "to": "P4"},
+            {"from": "P4", "to": "P5"},
+            {"from": "T1", "to": "T2"},
+            {"from": "T2", "to": "T3"},
+            {"from": "T3", "to": "T4"},
+            {"from": "T4", "to": "T5"},
+            {"from": "B1", "to": "B2"},
+            {"from": "B2", "to": "B3"},
+            {"from": "B3", "to": "B4"},
+            {"from": "B4", "to": "B5"}
+          ]
+        },
+        "forbidden_visualization": [
+          "禁止画成五类架构清单加三张同权卡片",
+          "禁止删除五站纵向映射，导致流程、工具、BOM 彼此断裂",
+          "禁止大面积蓝色或红色箭头压过文字",
+          "禁止将数字主线平台画成装饰性口号底栏",
+          "禁止把截图模糊 Logo 当作事实证据"
+        ]
+      },
+      "display_text": [
+        "五类架构指导：业务 / 流程 / 角色 / 应用 / 数据",
+        "数字化流程链：SysML → Modelica → CAD → CAE → CAPP",
+        "数字工具链：系统建模 → 多领域建模 → 详细设计 → 仿真分析 → 工艺准备",
+        "数字血缘：架构 BOM → 参数 BOM → EBOM → 仿真 BOM → MBOM",
+        "数字主线平台：承接跨专业、跨工具、跨阶段追溯",
+        "判断：先定架构边界，再贯通流程、工具与数据对象"
+      ],
+      "speaker_notes": "讲解顺序：先讲左侧 MBESE 五类架构用于定义工程边界；再沿三条横向主链说明流程活动、工具能力和 BOM 对象不是三套系统，而是围绕同一研发站点协同；最后收口到数字主线平台承接跨阶段追溯。对截图中的 Logo 仅做弱化参考，不扩写具体厂商能力。",
+      "chart_type": "architecture_flow_diagram",
+      "chart_data": {
+        "nodes": [
+          {"id": "M1", "label": "业务架构", "description": "技术领域、专业划分", "group": "method"},
+          {"id": "M2", "label": "流程架构", "description": "研制流程、操作规程", "group": "method"},
+          {"id": "M3", "label": "角色架构", "description": "型号队伍、职责协同", "group": "method"},
+          {"id": "M4", "label": "应用架构", "description": "设计建模与仿真工具", "group": "method"},
+          {"id": "M5", "label": "数据架构", "description": "研制数据识别与分类", "group": "method"},
+          {"id": "GUIDE", "label": "体系化方法指导", "group": "input"},
+          {"id": "APP", "label": "应用架构接入", "group": "input"},
+          {"id": "DATA", "label": "数据架构接入", "group": "input"},
+          {"id": "P1", "label": "SysML", "group": "process"},
+          {"id": "P2", "label": "Modelica", "group": "process"},
+          {"id": "P3", "label": "CAD", "group": "process"},
+          {"id": "P4", "label": "CAE", "group": "process"},
+          {"id": "P5", "label": "CAPP", "group": "process"},
+          {"id": "T1", "label": "系统建模", "group": "tool"},
+          {"id": "T2", "label": "多领域建模", "group": "tool"},
+          {"id": "T3", "label": "详细设计", "group": "tool"},
+          {"id": "T4", "label": "仿真分析", "group": "tool"},
+          {"id": "T5", "label": "工艺准备", "group": "tool"},
+          {"id": "B1", "label": "架构 BOM", "group": "bom"},
+          {"id": "B2", "label": "参数 BOM", "group": "bom"},
+          {"id": "B3", "label": "EBOM", "group": "bom"},
+          {"id": "B4", "label": "仿真 BOM", "group": "bom"},
+          {"id": "B5", "label": "MBOM", "group": "bom"},
+          {"id": "PLATFORM", "label": "数字主线平台", "group": "platform"}
+        ],
+        "edges": [
+          {"from": "M1", "to": "GUIDE", "label": "指导"},
+          {"from": "M2", "to": "GUIDE", "label": "指导"},
+          {"from": "M3", "to": "GUIDE", "label": "指导"},
+          {"from": "M4", "to": "APP", "label": "接入"},
+          {"from": "M5", "to": "DATA", "label": "接入"},
+          {"from": "P1", "to": "P2", "label": "推进"},
+          {"from": "P2", "to": "P3", "label": "推进"},
+          {"from": "P3", "to": "P4", "label": "推进"},
+          {"from": "P4", "to": "P5", "label": "推进"},
+          {"from": "T1", "to": "T2", "label": "协同"},
+          {"from": "T2", "to": "T3", "label": "协同"},
+          {"from": "T3", "to": "T4", "label": "协同"},
+          {"from": "T4", "to": "T5", "label": "协同"},
+          {"from": "B1", "to": "B2", "label": "演进"},
+          {"from": "B2", "to": "B3", "label": "演进"},
+          {"from": "B3", "to": "B4", "label": "演进"},
+          {"from": "B4", "to": "B5", "label": "演进"}
+        ],
+        "lanes": [
+          {"name": "数字化流程链", "items": ["SysML", "Modelica", "CAD", "CAE", "CAPP"]},
+          {"name": "数字工具链", "items": ["系统建模", "多领域建模", "详细设计", "仿真分析", "工艺准备"]},
+          {"name": "数字血缘", "items": ["架构 BOM", "参数 BOM", "EBOM", "仿真 BOM", "MBOM"]}
+        ]
+      },
+      "layout_pattern": "stack_architecture_with_right_insights",
+      "visual_notes": "高密度单页：左 27% 五类架构指导 + 中 65% 三链五站架构图 + 右 8% 技术洞察；中部必须保留三条横向箭头和五组纵向映射；底座数字主线平台使用浅灰弱底，不复制截图中的高饱和蓝紫风格。",
+      "visual_focus": ["五类架构指导", "三条数字化主链", "五站纵向映射", "数字主线平台"],
+      "must_highlight": ["贯通", "数字主线平台"],
+      "text_density": "high",
+      "need_compression": false,
+      "data_gaps": [
+        "截图中的工具 Logo、产品版本和厂商能力未核验",
+        "当前交付为结构化技术表达，不包含收益、效率或成熟度量化数据"
+      ]
+    }
+  ]
+}

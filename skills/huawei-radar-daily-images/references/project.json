@@ -1,0 +1,6 @@
+{
+  "adapter_version": "1.2.0",
+  "output_root": "reports/daily-images",
+  "upstream_lock_sha256": "556899845fe37a7af4cab296896ad62f38754e69ee46d68a7f63dc770a3b497f",
+  "bytecode_prefix": "tmp/pycache"
+}
